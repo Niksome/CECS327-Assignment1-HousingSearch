@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "city": "Long Beach",
+        "address": "123 Ocean Blvd",
+        "price": 2200,
+        "bedrooms": 2
+    },
+    {
+        "id": 2,
+        "city": "Los Angeles",
+        "address": "456 Main St",
+        "price": 2500,
+        "bedrooms": 1
+    },
+    {
+        "id": 3,
+        "city": "San Diego",
+        "address": "789 Pine Ave",
+        "price": 1800,
+        "bedrooms": 1
+    },
+    {
+        "id": 4,
+        "city": "San Francisco",
+        "address": "101 Market St",
+        "price": 3500,
+        "bedrooms": 2
+    },
+    {
+        "id": 5,
+        "city": "Irvine",
+        "address": "202 Campus Dr",
+        "price": 2700,
+        "bedrooms": 2
+    },
+    {
+        "id": 6,
+        "city": "Santa Monica",
+        "address": "303 Ocean Park Blvd",
+        "price": 3200,
+        "bedrooms": 2
+    },
+    {
+        "id": 7,
+        "city": "Anaheim",
+        "address": "404 Disney Way",
+        "price": 2000,
+        "bedrooms": 2
+    },
+    {
+        "id": 8,
+        "city": "Pasadena",
+        "address": "505 Rose Ave",
+        "price": 2300,
+        "bedrooms": 2
+    },
+    {
+        "id": 9,
+        "city": "Burbank",
+        "address": "606 Media Ln",
+        "price": 2400,
+        "bedrooms": 2
+    },
+    {
+        "id": 10,
+        "city": "Glendale",
+        "address": "707 Grandview Blvd",
+        "price": 2100,
+        "bedrooms": 1
+    },
+    {
+        "id": 11,
+        "city": "Riverside",
+        "address": "808 River Rd",
+        "price": 1700,
+        "bedrooms": 1
+    },
+    {
+        "id": 12,
+        "city": "Sacramento",
+        "address": "909 Capitol Ave",
+        "price": 1600,
+        "bedrooms": 1
+    },
+    {
+        "id": 13,
+        "city": "Oakland",
+        "address": "111 Bay St",
+        "price": 2000,
+        "bedrooms": 2
+    },
+    {
+        "id": 14,
+        "city": "Fremont",
+        "address": "222 Mission Blvd",
+        "price": 1900,
+        "bedrooms": 2
+    },
+    {
+        "id": 15,
+        "city": "Santa Clara",
+        "address": "333 Tech Pkwy",
+        "price": 2600,
+        "bedrooms": 2
+    },
+    {
+        "id": 16,
+        "city": "Sunnyvale",
+        "address": "444 El Camino Real",
+        "price": 2500,
+        "bedrooms": 2
+    },
+    {
+        "id": 17,
+        "city": "Palo Alto",
+        "address": "555 University Ave",
+        "price": 3800,
+        "bedrooms": 3
+    },
+    {
+        "id": 18,
+        "city": "Berkeley",
+        "address": "666 College Ave",
+        "price": 2200,
+        "bedrooms": 2
+    },
+    {
+        "id": 19,
+        "city": "Huntington Beach",
+        "address": "777 Seaside Ln",
+        "price": 2400,
+        "bedrooms": 2
+    },
+    {
+        "id": 20,
+        "city": "Long Beach",
+        "address": "888 Harbor Dr",
+        "price": 2300,
+        "bedrooms": 2
+    }
+]
