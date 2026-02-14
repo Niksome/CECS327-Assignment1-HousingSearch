@@ -1,28 +1,28 @@
 [
     {
         "id": 1,
-        "city": "Long Beach",
+        "city": "LongBeach",
         "address": "123 Ocean Blvd",
         "price": 2200,
         "bedrooms": 2
     },
     {
         "id": 2,
-        "city": "Los Angeles",
+        "city": "LosAngeles",
         "address": "456 Main St",
         "price": 2500,
         "bedrooms": 1
     },
     {
         "id": 3,
-        "city": "San Diego",
+        "city": "SanDiego",
         "address": "789 Pine Ave",
         "price": 1800,
         "bedrooms": 1
     },
     {
         "id": 4,
-        "city": "San Francisco",
+        "city": "SanFrancisco",
         "address": "101 Market St",
         "price": 3500,
         "bedrooms": 2
@@ -36,7 +36,7 @@
     },
     {
         "id": 6,
-        "city": "Santa Monica",
+        "city": "SantaMonica",
         "address": "303 Ocean Park Blvd",
         "price": 3200,
         "bedrooms": 2
@@ -99,7 +99,7 @@
     },
     {
         "id": 15,
-        "city": "Santa Clara",
+        "city": "SantaClara",
         "address": "333 Tech Pkwy",
         "price": 2600,
         "bedrooms": 2
@@ -113,7 +113,7 @@
     },
     {
         "id": 17,
-        "city": "Palo Alto",
+        "city": "PaloAlto",
         "address": "555 University Ave",
         "price": 3800,
         "bedrooms": 3
@@ -127,14 +127,14 @@
     },
     {
         "id": 19,
-        "city": "Huntington Beach",
+        "city": "HuntingtonBeach",
         "address": "777 Seaside Ln",
         "price": 2400,
         "bedrooms": 2
     },
     {
         "id": 20,
-        "city": "Long Beach",
+        "city": "LongBeach",
         "address": "888 Harbor Dr",
         "price": 2300,
         "bedrooms": 2
