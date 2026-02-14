@@ -5,6 +5,10 @@ HOST = '127.0.0.1'
 PORT = 8080
 RAW_LIST = "RAW_LIST"
 RAW_SEARCH = "RAW_SEARCH"
+NEWLINE = "\n"
+CITY_KEY = "city"
+MAX_PRICE_KEY = "max_price"
+EQUALS = "="
 NO_COMMAND = "ERROR: This is not a valid command!\n"
 NOT_ENOUGH_ARGS = "ERROR not enough arguments: RAW_SEARCH command requires a two arguments: cityname and max_price.\n"
 TO_MUCH_ARGS = "ERROR too much arguments: RAW_SEARCH command requires a two arguments: cityname and max_price.\n"
@@ -22,13 +26,13 @@ def recv_input_line(conn) -> str:
         chunk = conn.recv(1)
         if not chunk:
             return ""
-        if chunk == b"\n":
+        if chunk == NEWLINE.encode():
             break
         buf += chunk
     return buf.decode()
 
 def raw_list(conn):
-    conn.sendall((listings.to_string() + "\n").encode())
+    conn.sendall((listings.to_string() + NEWLINE).encode())
 
 def raw_search_input_split(line):
     parts = line.split()
@@ -44,14 +48,14 @@ def raw_search_input_split(line):
     # Extracting the values for city and max_price
     params = {}
     for token in parts[1:]:
-        if "=" not in token:
+        if EQUALS not in token:
             conn.sendall(MALFORMED_ARGS.encode())
             return
-        key, value = token.split("=", 1)
+        key, value = token.split(EQUALS, 1)
         params[key] = value
     
-    city = params.get("city")
-    max_price = params.get("max_price")
+    city = params.get(CITY_KEY)
+    max_price = params.get(MAX_PRICE_KEY)
 
     # Cheking if city and max_price are present to make sure that the creation worked
     if city is None or max_price is None:
@@ -73,8 +77,8 @@ def raw_search(conn, line):
     except:
         return
     
-    findings = listings.loc[(listings['city'] == city) & (listings['price'] <= max_price)]
-    conn.sendall((findings.to_string() + "\n").encode())
+    findings = listings.loc[(listings[CITY_KEY] == city) & (listings[MAX_PRICE_KEY] <= max_price)]
+    conn.sendall((findings.to_string() + NEWLINE).encode())
 
 s = socket(AF_INET, SOCK_STREAM)
 s.bind((HOST, PORT))
