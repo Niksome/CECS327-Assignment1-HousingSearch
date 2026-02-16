@@ -7,6 +7,7 @@ RAW_LIST = "RAW_LIST"
 RAW_SEARCH = "RAW_SEARCH"
 NEWLINE = "\n"
 CITY_KEY = "city"
+PRICE_KEY = "price"
 MAX_PRICE_KEY = "max_price"
 EQUALS = "="
 NO_COMMAND = "ERROR: This is not a valid command!\n"
@@ -77,7 +78,7 @@ def raw_search(conn, line):
     except:
         return
     
-    findings = listings.loc[(listings[CITY_KEY] == city) & (listings[MAX_PRICE_KEY] <= max_price)]
+    findings = listings.loc[(listings[CITY_KEY] == city) & (listings[PRICE_KEY] <= max_price)]
     conn.sendall((findings.to_string() + NEWLINE).encode())
 
 s = socket(AF_INET, SOCK_STREAM)
