@@ -161,10 +161,10 @@ def tcp_server():
 
                 # build response
                 out = []
-                out.append("RESULT " + str(len(items)))
+                out.append("OK RESULT " + str(len(items)))
 
                 for x in items:
-                    line_out = "id=" + str(x["id"]) + ";city=" + x["city"] + ";address=" + x["address"] + ";price=" + str(x["price"]) + ";bedrooms=" + str(x["bedrooms"])
+                    line_out = "id=" + str(x['id']) + ";city=" + x['city'] + ";address=" + x['address'] + ";price=" + str(x['price']) + ";bedrooms=" + str(x['bedrooms'])
                     out.append(line_out)
 
                 out.append("END")

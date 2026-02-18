@@ -33,7 +33,13 @@ def recv_input_line(conn) -> str:
     return buf.decode()
 
 def raw_list(conn):
-    conn.sendall((listings.to_string() + NEWLINE).encode())
+    result = "\n".join(
+        listings.apply(
+            lambda row: f"id={row['id']};city={row['city']};address={row['address']};price={row['price']};bedrooms={row['bedrooms']}",
+            axis=1
+        )
+    )   
+    conn.sendall(("OK RESULT " + NEWLINE + result + NEWLINE + "END").encode())
 
 def raw_search_input_split(line):
     parts = line.split()
@@ -79,7 +85,15 @@ def raw_search(conn, line):
         return
     
     findings = listings.loc[(listings[CITY_KEY] == city) & (listings[PRICE_KEY] <= max_price)]
-    conn.sendall((findings.to_string() + NEWLINE).encode())
+
+    result = "\n".join(
+        findings.apply(
+            lambda row: f"id={row['id']};city={row['city']};address={row['address']};price={row['price']};bedrooms={row['bedrooms']}",
+            axis=1
+        )
+    )
+
+    conn.sendall(("OK RESULT " + NEWLINE + result + NEWLINE + "END").encode())
 
 s = socket(AF_INET, SOCK_STREAM)
 s.bind((HOST, PORT))
