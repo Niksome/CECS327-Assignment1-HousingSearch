@@ -3,6 +3,7 @@
 - Andrej Ermoshkin 
 - Ashley Celis 
 - Fortune Meya 
+
 [Repository link](https://github.com/Niksome/CECS327-Assignment1-HousingSearch)
 
 
