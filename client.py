@@ -1,7 +1,7 @@
 import socket
 
 HOST = '127.0.0.1'
-PORT = 8080
+PORT = 8081
 
 #Function that sends request to the application server and returns the response
 def send_request(user_request):
@@ -19,7 +19,7 @@ def send_request(user_request):
 
                 if "END\n" in response or response.startswith("ERROR"):
                     break
-                  
+
             return response       
     except Exception as e:
         return f"ERROR {str(e)}"
@@ -32,8 +32,8 @@ def result_output(response):
         print(f"\n{lines[0]}\n")
         return
     
-    if lines[0].startswith("OK RESULT"):
-        count = int(lines[0].split()[2])
+    if lines[0].startswith("RESULT"):
+        count = int(lines[0].split()[1])
         print(f"Listings found: {count}\n")
         print("-" * 67)
         print(f"{'ID':<5} {'CITY':<15} {'ADDRESS':<25} {'PRICE':<10} {'BEDROOMS':<5}")
