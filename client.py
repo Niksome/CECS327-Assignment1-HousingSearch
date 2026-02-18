@@ -32,8 +32,8 @@ def result_output(response):
         print(f"\n{lines[0]}\n")
         return
     
-    if lines[0].startswith("RESULT"):
-        count = int(lines[0].split()[1])
+    if lines[0].startswith("OK RESULT"):
+        count = int(lines[0].split()[2])
         print(f"Listings found: {count}\n")
         print("-" * 67)
         print(f"{'ID':<5} {'CITY':<15} {'ADDRESS':<25} {'PRICE':<10} {'BEDROOMS':<5}")
