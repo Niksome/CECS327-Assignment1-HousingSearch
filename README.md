@@ -9,6 +9,7 @@
 
 ## How to run:
 ### Step 0: Setup
+Clone the repository from [here](https://github.com/Niksome/CECS327-Assignment1-HousingSearch) into a folder of your choice.
 To get all the packages necessary for to run this project we recommend setting up a virtual environment like this:
 1. Create a virtual environment: ```python -m venv <virtualEnvironmentName>```
 2. Activate the virtual environment:
